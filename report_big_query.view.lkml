@@ -1,4 +1,4 @@
-view: report_big_query {
+view: google_analytics_reporting {
   sql_table_name: big_squid_ga.report;;
 
   dimension: source {
