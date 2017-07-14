@@ -38,6 +38,11 @@ view: order_items {
     sql: ${TABLE}.sale_price ;;
   }
 
+  measure: net_price {
+    type: sum
+    sql: ${TABLE}.sale_price - ${inventory_items.cost} ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [id, inventory_items.id, orders.id]
